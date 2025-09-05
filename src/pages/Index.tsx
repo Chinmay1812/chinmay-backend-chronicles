@@ -38,6 +38,28 @@ const projects = [
 
 export default function Index() {
   useEffect(() => {
+    // Add smooth scrolling behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Handle navigation clicks to scroll to sections
+    const handleNavClick = (e: Event) => {
+      const target = e.target as HTMLAnchorElement;
+      if (target.tagName === 'A' && target.hash) {
+        e.preventDefault();
+        const targetSection = document.querySelector(target.hash);
+        if (targetSection) {
+          targetSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Update URL without triggering navigation
+          window.history.pushState(null, '', target.hash);
+        }
+      }
+    };
+
+    document.addEventListener('click', handleNavClick);
+
     // SEO: Title & description
     document.title = seo.title;
     const setMeta = (name: string, content: string) => {
@@ -95,6 +117,8 @@ export default function Index() {
 
     return () => {
       document.head.removeChild(script);
+      document.removeEventListener('click', handleNavClick);
+      document.documentElement.style.scrollBehavior = 'auto';
     };
   }, []);
 
