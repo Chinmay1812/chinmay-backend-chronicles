@@ -107,9 +107,9 @@ All colors MUST be HSL.
 /* Enhanced design tokens and components */
 @layer base {
   :root {
-    /* Professional brand colors */
-    --brand: 217 32% 28%;
-    --brand-2: 210 28% 35%;
+    /* Professional trust colors */
+    --brand: 214 84% 56%;
+    --brand-2: 221 83% 53%;
 
     /* Subtle professional gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--brand)) 0%, hsl(var(--brand-2)) 100%);
@@ -119,8 +119,8 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --brand: 217 32% 28%;
-    --brand-2: 210 28% 35%;
+    --brand: 214 84% 56%;
+    --brand-2: 221 83% 53%;
     --gradient-hero: linear-gradient(135deg, hsl(var(--brand)) 0%, hsl(var(--brand-2)) 100%);
     --shadow-elegant: 0 12px 30px -12px hsl(var(--brand) / 0.25);
     --shadow-glow: 0 0 25px hsl(var(--brand-2) / 0.15);
