@@ -75,9 +75,7 @@ export default function Index() {
         name: 'ConceptDash',
       },
       sameAs: [
-        // Add your real profile links later
-        'https://github.com/',
-        'https://www.linkedin.com/',
+        'https://www.linkedin.com/in/chinmayjain7/',
       ],
     };
 
@@ -245,7 +243,7 @@ export default function Index() {
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <a href="mailto:chinmay@example.com" aria-label="Email Chinmay">
+                <a href="mailto:chinmaydhariwal1812@gmail.com" aria-label="Email Chinmay">
                   Email me
                 </a>
               </Button>
